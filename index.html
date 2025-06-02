@@ -18,3 +18,28 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My HTML App</title>
+
+  <!-- Application Insights SDK -->
+  <script type="text/javascript">
+    var appInsights = window.appInsights || function (config) {
+      function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+      var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f;
+      for (s.src = config.url || "https://js.monitor.azure.com/scripts/b/ai.2.min.js", u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ["trackEvent", "trackPageView", "trackException", "trackTrace", "trackMetric", "startTrackPage", "stopTrackPage", "startTrackEvent", "stopTrackEvent", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"], f = 0; f < i.length; f++)r(i[f]);
+      return t;
+    }({
+      connectionString: "InstrumentationKey=YOUR_INSTRUMENTATION_KEY"
+    });
+
+    window.appInsights = appInsights;
+    appInsights.trackPageView(); // Track initial page load
+  </script>
+
+</head>
+<body>
+  <h1>Hello, App Insights!</h1>
+</body>
+</html>
