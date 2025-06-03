@@ -1,6 +1,11 @@
 {
   "routes": [
     {
+      "route": "/api/hello",
+      "rewrite": "/api/hello.js",
+      "allowedRoles": ["anonymous"]
+    },
+    {
       "route": "/api/*",
       "allowedRoles": ["anonymous"]
     }
